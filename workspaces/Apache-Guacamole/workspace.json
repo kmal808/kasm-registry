@@ -1,0 +1,37 @@
+{
+  "friendly_name": "Apache Guacamole",
+  "image_src": "blob:https://jacobgaming27.github.io/f44119e9-acaf-4a52-9179-dd1e0010d865",
+  "description": "Guacamole is a new simple way to allow VNC, RDP and SSH connections easily through your web browser.",
+  "name": "dockerscripts/guacamole:develop",
+  "cores": 2,
+  "memory": 2768,
+  "gpu_count": 0,
+  "cpu_allocation_method": "Inherit",
+  "docker_registry": "https://index.docker.io/v1/",
+  "categories": [
+    "Remote Access"
+  ],
+  "require_gpu": false,
+  "enabled": true,
+  "image_type": "Container",
+  "run_config": {
+    "hostname": "kasm"
+  },
+  "exec_config": {
+    "go": {
+      "cmd": "bash -c '/dockerstartup/custom_startup.sh --go --url \"$KASM_URL\"'"
+    },
+    "assign": {
+      "cmd": "bash -c '/dockerstartup/custom_startup.sh --assign --url \"$KASM_URL\"'"
+    }
+  },
+  "architecture": [
+    "amd64",
+    "arm64"
+  ],
+  "compatibility": [
+    "1.13.x",
+    "1.14.x"
+  ],
+  "uncompressed_size_mb": 2170
+}
