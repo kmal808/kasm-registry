@@ -1,7 +1,7 @@
 {
   "description": "Free online diagraming for all",
   "docker_registry": "https://index.docker.io/v1/",
-  "image_src": "drawio.png",
+  "image_src": "draw.png",
   "name": "jgraph/drawio:latest",
   "run_config": {
     "hostname": "kasm"
