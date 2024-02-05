@@ -1,25 +1,24 @@
 {
-  "friendly_name": "Obsidian",
-  "image_src": "obsidian.ico",
-  "description": "Browser accessible version of Obsidian",
-  "name": "bambam018/kasmweb-obsidian:latest",
-  "cores": 2,
-  "memory": 2768,
-  "gpu_count": 0,
-  "uncompressed_size_mb": 6144,
-  "cpu_allocation_method": "Inherit",
+  "description": "Obsidian is a free note taking app.",
   "docker_registry": "https://index.docker.io/v1/",
-  "categories": [
-    "Productivity",
-    "Office"
+  "image_src": "obsidian.ico",
+  "name": "zaratul9/obsidian-workspace:1.14.3",
+  "run_config": {
+    "hostname": "kasm"
+  },
+  "exec_config": {
+    "go": {
+      "cmd": "bash -c '/dockerstartup/custom_startup.sh --go --url \"$KASM_URL\"'"
+    },
+    "assign": {
+      "cmd": "bash -c '/dockerstartup/custom_startup.sh --assign --url \"$KASM_URL\"'"
+    }
+  },
+  "categories": ["Productivity"],
+  "friendly_name": "Obsidian",
+  "architecture": ["amd64"],
+  "compatibility": ["1.14.x",
+    "1.13.x"
   ],
-  "require_gpu": false,
-  "enabled": true,
-  "image_type": "Container",
-  "architecture": [
-    "amd64"
-  ],
-  "compatibility": [
-    "1.14.x"
-  ]
+  "uncompressed_size_mb": 2550
 }
