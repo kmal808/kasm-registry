@@ -1,0 +1,29 @@
+{
+    "friendly_name": "Rustdesk Client",
+    "image_src": "rustdesk.png",
+    "description": "Yet another remote desktop software, written in Rust",
+    "name": "registry.mdoni.de/donimax/rustdesk-kasmvnc:latest",
+    "cpu_allocation_method": "Inherit",
+    "docker_registry": "https://registry.mdoni.de/",
+    "categories": [
+        "Remote Access"
+    ],
+    "require_gpu": false,
+    "enabled": true,
+    "image_type": "Container",
+    "run_config": {
+      "entrypoint": [
+        "/kasminit"
+      ],
+      "user": 1000
+    },
+    "exec_config": {},
+    "architecture": [
+      "amd64"
+    ],
+    "compatibility": [
+     "1.13.x",
+     "1.14.x"
+    ],
+    "uncompressed_size_mb": 1960
+  }
