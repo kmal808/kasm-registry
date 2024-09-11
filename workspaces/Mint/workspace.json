@@ -1,0 +1,31 @@
+{
+  "description": "Linux Mint is an operating system for desktop and laptop computers.",
+  "docker_registry": "https://index.docker.io/v1/",
+  "image_src": "logo_linux_mint_22361.png",
+  "name": "linuxmintd/mint20.2-amd64:latest",
+  "cores": 2,
+  "memory": 4096,
+  "gpu_count": 0,
+  "uncompressed_size_mb": 12500,
+  "cpu_allocation_method": "Inherit",
+  "run_config": {
+    "hostname": "kasm-mint"
+  },
+  "exec_config": {
+     "first_launch": {
+       "user":"root",
+       "cmd":"bash -c 'echo \"kasm-user  ALL=(ALL) NOPASSWD: ALL\" >> /etc/sudoers'"
+     }
+  },
+  "categories": [
+    "Desktop"
+  ],
+  "friendly_name": "Linux_Mint",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    "1.15.x",
+    "1.14.x"
+  ]
+}
